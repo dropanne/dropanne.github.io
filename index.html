@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+
+    <!-- Google AdSense Script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506789374181904"
         crossorigin="anonymous"></script>
-    <script>
-        // Wait 60 seconds before showing the ad
-        setTimeout(function () {
-            document.getElementById("ad-container").style.display = "block";
-            
-            // Initialize AdSense
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        }, 60000); // 60 seconds
 
-        // Redirect after 70 seconds to ensure ad visibility
-        setTimeout(function () {
-            window.location.href = "https://www.example.com";
-        }, 70000); // 70 seconds
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show the ad after 60 seconds
+            setTimeout(function () {
+                document.getElementById("ad-container").style.display = "block";
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }, 60000); // 60 seconds
+
+            // Redirect after 70 seconds
+            setTimeout(function () {
+                window.location.href = "https://www.example.com";
+            }, 70000); // 70 seconds
+        });
     </script>
 </head>
 <body>
     <p>Redirecting in 1 minute... Please wait.</p>
 
-    <!-- Ad Container (Hidden initially) -->
+    <!-- Ad Container (Initially Hidden) -->
     <div id="ad-container" style="display: none; text-align: center; margin-top: 20px;">
         <ins class="adsbygoogle"
             style="display:block"
